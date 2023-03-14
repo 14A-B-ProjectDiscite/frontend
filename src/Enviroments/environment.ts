@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'http://nagyilles.jedlik.cloud/api/'
+    apiUrl: 'https://nagyilles.jedlik.cloud/api/api/'
   };

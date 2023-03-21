@@ -20,12 +20,20 @@ export class NavComponent implements OnInit {
   }
 
   login(){
-    this.accountService.login(this.model).subscribe(response =>{
+    this.accountService.login(this.model).subscribe(response => {
       this.router.navigateByUrl('/users');
-    }, error=>{
+    }, error => {
       console.log(error);
-      this.toastr.error(error.error);
-    })
+      let errorMessage = '';
+  
+      if (error.status === 400) {
+        errorMessage = 'Invalid email or password.';
+      } else {
+        errorMessage = 'An error occurred while processing your request. Please try again later.';
+      }
+  
+      this.toastr.error(errorMessage, 'Login Error');
+    });
   }
 
   logout(){

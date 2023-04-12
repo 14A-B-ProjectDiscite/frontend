@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    apiUrl: 'https://nagyilles.jedlik.cloud/api/api/'
+    apiUrl: 'http://localhost:5241/api/'
   };

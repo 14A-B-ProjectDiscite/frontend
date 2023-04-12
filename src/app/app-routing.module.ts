@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {
   AdminConfigurationComponent,
+  EnemyStatsComponent,
   HomeComponent,
   ListsComponent,
   NewsComponent,
   ProfileEditComponent,
-  UserListComponent
+  UserListComponent,
+  WeaponStatsComponent
 } from './Components';
 import { ClassesComponent } from './Components/classes/classes.component';
 
@@ -15,6 +17,8 @@ const routes: Routes = [
     {path:'',
     runGuardsAndResolvers: 'always',
     children:[
+      {path: 'enemy', component: EnemyStatsComponent, },
+      {path: 'weapon', component: WeaponStatsComponent, },
       {path: 'class', component: ClassesComponent, },
       {path: 'config', component: AdminConfigurationComponent, },
       {path: 'edit', component: ProfileEditComponent, },

@@ -12,7 +12,9 @@ import {
   ProfileEditComponent,
   HomeComponent,
   AdminConfigurationComponent,
-  ClassesComponent
+  ClassesComponent,
+  EnemyStatsComponent,
+  WeaponStatsComponent
 } from './Components';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -38,7 +40,9 @@ import { CommonModule } from '@angular/common';
     InterceptorsComponent,
     ProfileEditComponent,
     AdminConfigurationComponent,
-    ClassesComponent
+    ClassesComponent,
+    EnemyStatsComponent,
+    WeaponStatsComponent
   ],
   imports: [
     BrowserModule,

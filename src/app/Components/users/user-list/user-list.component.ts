@@ -45,28 +45,4 @@ export class UserListComponent {
       this.loadUsers();
     }
   }
-
-/*
-  loadUsers(){
-    this.userService.getUsers().subscribe(users => {
-      if (localStorage.getItem('user') !== null) {
-        this.users = users;
-      }
-    });
-  }
-  */
- /*
-  loadUsers() {
-    this.userService.getUsers().pipe(
-      map(event => event instanceof HttpResponse ? event.body : null)
-    ).subscribe(
-      users => {
-        if (localStorage.getItem('user') !== null) {
-          this.users = users;
-        }
-      },
-      error => console.error(error)
-    );
-}
-  */
 }

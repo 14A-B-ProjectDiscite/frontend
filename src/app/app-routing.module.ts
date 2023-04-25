@@ -5,7 +5,6 @@ import {
   EnemyStatsComponent,
   HomeComponent,
   ListsComponent,
-  NewsComponent,
   ProfileEditComponent,
   UserListComponent,
   WeaponStatsComponent
@@ -24,7 +23,6 @@ const routes: Routes = [
       {path: 'edit', component: ProfileEditComponent, },
       {path: 'users', component: UserListComponent, },
       {path: 'lists', component: ListsComponent},
-      {path: 'news', component: NewsComponent},
       {path: '**', component: HomeComponent, pathMatch: "full"},
     ]
   }

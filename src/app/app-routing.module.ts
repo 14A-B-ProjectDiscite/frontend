@@ -9,7 +9,6 @@ import {
   UserListComponent,
   WeaponStatsComponent
 } from './Components';
-import { ClassesComponent } from './Components/classes/classes.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
@@ -18,7 +17,6 @@ const routes: Routes = [
     children:[
       {path: 'enemy', component: EnemyStatsComponent, },
       {path: 'weapon', component: WeaponStatsComponent, },
-      {path: 'class', component: ClassesComponent, },
       {path: 'config', component: AdminConfigurationComponent, },
       {path: 'edit', component: ProfileEditComponent, },
       {path: 'users', component: UserListComponent, },

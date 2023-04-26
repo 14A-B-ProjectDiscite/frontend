@@ -20,9 +20,8 @@ export class EnemyStatsComponent implements OnInit {
           return {
             id: enemy.id,
             name: enemy.name,
-            maxHp: enemy.maxHp,
+            health: enemy.health,
             damage: enemy.damage,
-            energy: enemy.energy,
             speed: enemy.speed,
             kills: enemyData?.kills || 0,
             deaths: enemyData?.deaths || 0

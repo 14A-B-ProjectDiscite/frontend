@@ -16,7 +16,7 @@ currentUser$ =this.currentUserSource.asObservable();
   
 
 login(model: any) {
-  return this.http.post(this.baseUrl + 'Users/login', model).pipe(
+  return this.http.post(this.baseUrl + 'user/login', model).pipe(
     map((response: UserModel) => {
       const user = response;
       if (user) {
@@ -28,7 +28,7 @@ login(model: any) {
 }
 
 register(model: any) {
-  return this.http.post(this.baseUrl + 'Users/register', model).pipe(
+  return this.http.post(this.baseUrl + 'user/register', model).pipe(
     map((user: UserModel) => {
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));

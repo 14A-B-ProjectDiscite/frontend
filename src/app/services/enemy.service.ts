@@ -13,6 +13,6 @@ export class EnemyService {
   constructor(private http: HttpClient) { }
 
   getEnemies(): Observable<EnemyModel[]> {
-    return this.http.get<EnemyModel[]>(this.baseUrl + 'Statistics/enemies');
+    return this.http.get<EnemyModel[]>(this.baseUrl + 'stats/enemies');
   }
 }

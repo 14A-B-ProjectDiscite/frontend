@@ -38,6 +38,12 @@ export class UserListComponent {
       this.loadUsers();
     }
   }
+  banUser(id: number) {
+    this.userService.banUser(id).subscribe(() => {
+      this.loadUsers();
+    });
+  }
+
 
   prevPage() {
     if (this.currentPage > 1) {
@@ -46,3 +52,4 @@ export class UserListComponent {
     }
   }
 }
+

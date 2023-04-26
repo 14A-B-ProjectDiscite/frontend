@@ -15,6 +15,9 @@
        <td>{{user.email}}</td>
        <td>{{user.registerDate}}</td>
        <td>{{user.lastActive}}</td>
+       <td>
+        <button (click)="banUser(user.id)">Ban</button>
+      </td>
      </tr>      
    </tbody>
 </table>

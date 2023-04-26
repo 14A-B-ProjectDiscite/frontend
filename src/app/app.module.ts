@@ -22,6 +22,7 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
 import { CommonModule } from '@angular/common';
 
 
+
 /*import { AuthInterceptor } from './services/users.service';*/
 
 
@@ -38,7 +39,7 @@ import { CommonModule } from '@angular/common';
     ProfileEditComponent,
     AdminConfigurationComponent,
     EnemyStatsComponent,
-    WeaponStatsComponent
+    WeaponStatsComponent,
   ],
   imports: [
     BrowserModule,

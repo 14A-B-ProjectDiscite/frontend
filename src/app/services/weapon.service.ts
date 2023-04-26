@@ -13,6 +13,6 @@ export class WeaponService {
   constructor(private http: HttpClient) { }
 
   getWeapons(): Observable<WeaponModel[]> {
-    return this.http.get<WeaponModel[]>(this.baseUrl + 'Statistics/weapons');
+    return this.http.get<WeaponModel[]>(this.baseUrl + 'stats/weapons');
   }
 }

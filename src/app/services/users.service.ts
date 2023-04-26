@@ -15,10 +15,14 @@ baseUrl = environment.apiUrl;
   constructor(private http: HttpClient) { }
 
   getUsers(){
-    return this.http.get<UserModel[]>(this.baseUrl + 'users');
+    return this.http.get<UserModel[]>(this.baseUrl + 'user');
+  }
+  
+  banUser(id: number) {
+    return this.http.delete(`api/user/${id}`);
   }
 
   getUser(id){
-    return this.http.get<UserModel>(this.baseUrl + 'users/'+ id);
+    return this.http.get<UserModel>(this.baseUrl + 'user/'+ id);
   }
 }

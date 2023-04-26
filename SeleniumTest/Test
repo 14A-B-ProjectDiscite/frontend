@@ -1,0 +1,95 @@
+using System;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
+
+namespace FrontEndSeleniumTest
+{
+    [TestFixture]
+    public class SeleniumTest
+    {
+        private IWebDriver driver;
+
+        [SetUp]
+        public void SetUp()
+        {
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://localhost:4200");
+        }
+
+        [Test]
+        public void AdminLogin()
+        {
+            IWebElement emailInput = driver.FindElement(By.Name("email"));
+            emailInput.SendKeys("admin@gmail.com");
+            IWebElement passwordInput = driver.FindElement(By.Name("password"));
+            passwordInput.SendKeys("Admin123");
+
+            IWebElement submitButton = driver.FindElement(By.CssSelector("button[type='submit']"));
+            submitButton.Click();
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.UrlContains("http://localhost:4200/users"));
+
+            IWebElement homeLink = driver.FindElement(By.LinkText("Home"));
+            homeLink.Click();
+            IWebElement usersLink = driver.FindElement(By.LinkText("User"));
+            usersLink.Click();
+            IWebElement listsLink = driver.FindElement(By.LinkText("Top-Lists"));
+            listsLink.Click();
+            IWebElement configLink = driver.FindElement(By.LinkText("Configuration"));
+
+            IWebElement welcomeDropdown = driver.FindElement(By.CssSelector(".dropdown-toggle"));
+            welcomeDropdown.Click();
+            IWebElement logoutLink = driver.FindElement(By.LinkText("Logout"));
+            logoutLink.Click();
+        }
+
+        [Test]
+        
+        public void UserRegisterAndLogin() {
+
+
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait.Until(ExpectedConditions.UrlContains("http://localhost:4200"));
+
+            driver.Navigate().GoToUrl("http://localhost:4200");
+
+            IWebElement registerButton = driver.FindElement(By.XPath("//button[contains(text(), 'Register')]"));
+            registerButton.Click();
+            IWebElement usernameField = driver.FindElement(By.Name("usernameregister"));
+            usernameField.SendKeys("testuser117");
+            IWebElement emailField = driver.FindElement(By.Name("emailregister"));
+            emailField.SendKeys("testuser117@gmail.com");
+            IWebElement passwordField = driver.FindElement(By.Name("passwordregister"));
+            passwordField.SendKeys("testpassword117");
+            IWebElement registerSubmitButton = driver.FindElement(By.XPath("//button[contains(text(), 'Register')]"));
+            registerSubmitButton.Click();
+            wait.Until(ExpectedConditions.UrlContains("http://localhost:4200"));
+
+
+            IWebElement homeLink = driver.FindElement(By.LinkText("Home"));
+            homeLink.Click();
+            IWebElement listsLink = driver.FindElement(By.LinkText("Top-Lists"));
+            listsLink.Click();
+            IWebElement welcomedropdown = driver.FindElement(By.CssSelector(".dropdown-toggle"));
+            welcomedropdown.Click();
+            IWebElement editLink = driver.FindElement(By.LinkText("Edit profile"));
+            editLink.Click();
+
+            wait.Until(ExpectedConditions.UrlContains("http://localhost:4200/edit"));
+
+
+        }
+
+
+
+        [TearDown]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+    }
+}

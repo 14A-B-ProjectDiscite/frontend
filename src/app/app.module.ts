@@ -11,7 +11,6 @@ import {
   ProfileEditComponent,
   HomeComponent,
   AdminConfigurationComponent,
-  ClassesComponent,
   EnemyStatsComponent,
   WeaponStatsComponent
 } from './Components';
@@ -38,7 +37,6 @@ import { CommonModule } from '@angular/common';
     InterceptorsComponent,
     ProfileEditComponent,
     AdminConfigurationComponent,
-    ClassesComponent,
     EnemyStatsComponent,
     WeaponStatsComponent
   ],

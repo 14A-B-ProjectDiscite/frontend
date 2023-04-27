@@ -1,4 +1,6 @@
-Frontend
+# Frontend
+
+# Elérhetőség
 
 # Lépjen be az angular program főkönyvtárába!
 cd /út/a/te/angular/applikációdhoz

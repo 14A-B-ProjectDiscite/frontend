@@ -20,15 +20,6 @@ export class AdminConfigurationComponent {
     });
   }
 
-  /*
-  onSave() {
-    this.configurationService.updateConfig(this.config).subscribe(
-      () => console.log('Configuration updated successfully'),
-      error => console.error('Error updating configuration', error)
-    );
-  }
-  */
-
   onSave() {
     this.configurationService.updateConfig(this.config).subscribe(
       () => {

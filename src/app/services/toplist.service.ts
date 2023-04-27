@@ -12,7 +12,7 @@ export class ToplistService {
   constructor(private http: HttpClient) { }
 
   getToplist(): Observable<ToplistModel[]> {
-    return this.http.get<ToplistModel[]>(this.baseUrl + 'Statistics/toplist');
+    return this.http.get<ToplistModel[]>(this.baseUrl + 'stats/toplist');
   }
  
 }

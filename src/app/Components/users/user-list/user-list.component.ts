@@ -38,6 +38,16 @@ export class UserListComponent {
       this.loadUsers();
     }
   }
+  banUser(id: number) {
+    this.userService.banUser(id).subscribe(() => {
+      this.loadUsers();
+    });
+  }
+  /*
+      <td>
+        <button (click)="banUser(user.id)">Ban</button>
+      </td>
+  */
 
   prevPage() {
     if (this.currentPage > 1) {
@@ -46,3 +56,4 @@ export class UserListComponent {
     }
   }
 }
+

@@ -21,7 +21,7 @@ export class WeaponStatsComponent implements OnInit {
             id: weapon.id,
             name: weapon.name,
             damage: weapon.damage,
-            attackSpeed: weapon.attackSpeed,
+            speed: weapon.speed,
             seen: weaponData?.seen || 0,
             picked: weaponData?.picked || 0
           };

@@ -13,7 +13,7 @@
       <tr *ngFor="let weapon of config.weapons">
         <td><input type="text" [(ngModel)]="weapon.name" class="form-control"></td>
         <td><input type="number" [(ngModel)]="weapon.damage" class="form-control"></td>
-        <td><input type="number" [(ngModel)]="weapon.attackSpeed" class="form-control"></td>
+        <td><input type="number" [(ngModel)]="weapon.speed" class="form-control"></td>
       </tr>
     </tbody>
 
@@ -21,9 +21,8 @@
       <h2>Enemy</h2>
         <tr>
           <th>Name</th>
-          <th>maxHp</th>
+          <th>Health</th>
           <th>damage</th>
-          <th>energy</th>
           <th>speed</th>
           
         </tr>
@@ -31,44 +30,24 @@
       <tbody>
         <tr *ngFor="let enemy of config.enemies">
           <td><input type="text" [(ngModel)]="enemy.name" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="enemy.maxHp" class="form-control"></td>
+          <td><input type="text" [(ngModel)]="enemy.health" class="form-control"></td>
           <td><input type="text" [(ngModel)]="enemy.damage" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="enemy.energy" class="form-control"></td>
           <td><input type="text" [(ngModel)]="enemy.speed" class="form-control"></td>
         </tr>
       </tbody>
 
-      <thead>
-        <h2>Class</h2>
-        <tr>
-          <th>Name</th>
-          <th>maxHp</th>
-          <th>damage</th>
-          <th>energy</th>
-          <th>speed</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let class of config.classes">
-          <td><input type="text" [(ngModel)]="class.name" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="class.maxHp" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="class.damage" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="class.energy" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="class.speed" class="form-control"></td>
-        </tr>
-      </tbody>
 
       <thead>
         <h2>Artifact</h2>
         <tr>
           <th>Name</th>
-          <th>Maxlevel</th>
+          <th>Power</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let artifact of config.artifacts">
           <td><input type="text" [(ngModel)]="artifact.name" class="form-control"></td>
-          <td><input type="text" [(ngModel)]="artifact.maxLevel" class="form-control"></td>
+          <td><input type="text" [(ngModel)]="artifact.power" class="form-control"></td>
         </tr>
       </tbody>
       <button type="submit" (click)="onSave()" class="btn btn-success">Update</button>

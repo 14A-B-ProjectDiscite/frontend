@@ -16,10 +16,10 @@ export class ConfigurationService {
  
 
   getConfig(): Observable<ConfigModel> {
-    return this.http.get<ConfigModel>(this.baseUrl + 'Configuration');
+    return this.http.get<ConfigModel>(this.baseUrl + 'config');
   }
 
   updateConfig(config: ConfigModel): Observable<ConfigModel> {
-    return this.http.put<ConfigModel>(this.baseUrl+'Configuration', config);
+    return this.http.put<ConfigModel>(this.baseUrl+'config', config);
   }
 }

@@ -43,7 +43,11 @@ export class UserListComponent {
       this.loadUsers();
     });
   }
-
+  /*
+      <td>
+        <button (click)="banUser(user.id)">Ban</button>
+      </td>
+  */
 
   prevPage() {
     if (this.currentPage > 1) {

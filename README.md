@@ -1,6 +1,8 @@
 # Frontend
 
 # Elérhetőség
+https://discite.jedlik.cloud
+
 
 # Lépjen be az angular program főkönyvtárába!
 cd /út/a/te/angular/applikációdhoz
